@@ -1,7 +1,7 @@
 # Lesson_26_DZ
 
 
-OUTPUT:
+OUTPUT:/n
 2
 6
 e
