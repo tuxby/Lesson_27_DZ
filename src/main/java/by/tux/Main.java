@@ -1,13 +1,15 @@
 package by.tux;
 
+import java.util.Comparator;
+import java.util.Map;
 import java.util.TreeMap;
 
 public class Main {
     public static void main(String[] args) {
-        task1();
-        task2();
+//        task1();
+//        task2();
         task3();
-        task4();
+//        task4();
     }
 
     //1. Найти миимальный минимальный элемент массива
@@ -54,9 +56,13 @@ public class Main {
                     hashMap.put(i, currentCount);
                 }
             }
-            return hashMap.firstKey().toString();
+            return hashMap.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).findFirst().toString();
         };
-        System.out.println(mostCharEntries.doSomeWork("er e ruy"));
+//        for (Map.Entry entry : map.entrySet()) {
+//            System.out.println("Key : " + entry.getKey()
+//                    + " Value : " + entry.getValue());
+//        }
+        System.out.println(mostCharEntries.doSomeWork("reiuehv wefo wihds sdk uuuuuuuu"));
     }
 
     //4. Отсортировать лист со строками в лексикографическом порядке, т.е по алфавиту
