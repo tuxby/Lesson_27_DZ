@@ -1,13 +1,14 @@
 package by.tux;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
-//        task1();
-//        task2();
+        task1();
+        task2();
         task3();
-//        task4();
+        task4();
     }
 
     //1. Найти миимальный минимальный элемент массива
@@ -42,7 +43,7 @@ public class Main {
 
     //3. Найти самую часто встречающуюся букву в строке
     public static void task3(){
-        CharFunc mostCharEntries = string -> {
+        StringFunc mostCharEntries = string -> {
             HashMap<Character,Integer> hashMap = new HashMap<>();
             for(Character i: string.toCharArray()){
                 if (!hashMap.containsKey(i) && !Character.isWhitespace(i)) {
@@ -57,12 +58,24 @@ public class Main {
             return Collections.max(hashMap.entrySet(), Map.Entry.comparingByValue()).getKey().toString();
         };
 
-        System.out.println(mostCharEntries.doSomeWork("reiuehv wefo wihds sdk uuuuuuuu oooooooooooooooo"));
+        System.out.println(mostCharEntries.doSomeWork("Learns very cool if you like what you teach"));
     }
 
     //4. Отсортировать лист со строками в лексикографическом порядке, т.е по алфавиту
     public static void task4(){
-        System.out.println();
+        StringFunc wordViaAphabet = string -> {
+            TreeSet<String> treeSet = new TreeSet<>();
+            String s[] = string.split(" ");
+            for(var i : s){
+                treeSet.add(i);
+            }
+            String res = "";
+            for(var i : treeSet){
+                res = res + i + " ";
+            }
+            return res;
+        };
+        System.out.println(wordViaAphabet.doSomeWork("Learns very cool if you like what you teach"));
     }
 }
 

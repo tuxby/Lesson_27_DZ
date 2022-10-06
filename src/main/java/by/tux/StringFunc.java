@@ -1,5 +1,5 @@
 package by.tux;
 
-public interface CharFunc {
+public interface StringFunc {
     String doSomeWork(String string);
 }
