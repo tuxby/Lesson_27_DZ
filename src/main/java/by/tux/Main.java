@@ -67,7 +67,7 @@ public class Main {
             TreeSet<String> treeSet = new TreeSet<>();
             String s[] = string.split(" ");
             for(var i : s){
-                treeSet.add(i);
+                treeSet.add(i.toLowerCase());
             }
             String res = "";
             for(var i : treeSet){
