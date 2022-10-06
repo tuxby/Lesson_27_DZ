@@ -1,7 +1,6 @@
 package by.tux;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -58,7 +57,7 @@ public class Main {
             return Collections.max(hashMap.entrySet(), Map.Entry.comparingByValue()).getKey().toString();
         };
 
-        System.out.println(mostCharEntries.doSomeWork("reiuehv wefo wihds sdk uuuuuuuu yyyyyyyyyyyyyyyyyyyyyyyyy"));
+        System.out.println(mostCharEntries.doSomeWork("reiuehv wefo wihds sdk uuuuuuuu oooooooooooooooo"));
     }
 
     //4. Отсортировать лист со строками в лексикографическом порядке, т.е по алфавиту
