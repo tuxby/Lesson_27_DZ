@@ -1,8 +1,7 @@
 package by.tux;
 
-import java.util.Comparator;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -45,7 +44,7 @@ public class Main {
     //3. Найти самую часто встречающуюся букву в строке
     public static void task3(){
         CharFunc mostCharEntries = string -> {
-            TreeMap<Character,Integer> hashMap = new TreeMap<>();
+            HashMap<Character,Integer> hashMap = new HashMap<>();
             for(Character i: string.toCharArray()){
                 if (!hashMap.containsKey(i) && !Character.isWhitespace(i)) {
                     hashMap.put(i, 1);
@@ -56,13 +55,10 @@ public class Main {
                     hashMap.put(i, currentCount);
                 }
             }
-            return hashMap.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).findFirst().toString();
+            return Collections.max(hashMap.entrySet(), Map.Entry.comparingByValue()).getKey().toString();
         };
-//        for (Map.Entry entry : map.entrySet()) {
-//            System.out.println("Key : " + entry.getKey()
-//                    + " Value : " + entry.getValue());
-//        }
-        System.out.println(mostCharEntries.doSomeWork("reiuehv wefo wihds sdk uuuuuuuu"));
+
+        System.out.println(mostCharEntries.doSomeWork("reiuehv wefo wihds sdk uuuuuuuu yyyyyyyyyyyyyyyyyyyyyyyyy"));
     }
 
     //4. Отсортировать лист со строками в лексикографическом порядке, т.е по алфавиту
