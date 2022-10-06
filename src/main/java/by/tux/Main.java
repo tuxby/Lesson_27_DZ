@@ -25,7 +25,7 @@ public class Main {
         System.out.println(getMin.doSomeWork(new int[]{4,2,6,7,3}));
     }
 
-    //2. Найти второй по велечине элмент массива
+    //2. Найти второй по величине элемент массива
     public static void task2(){
         ArrayFunc getSecondMax = arr -> {
             int max = arr[0];
@@ -45,7 +45,7 @@ public class Main {
     public static void task3(){
         StringFunc mostCharEntries = string -> {
             HashMap<Character,Integer> hashMap = new HashMap<>();
-            for(Character i: string.toCharArray()){
+            for(Character i: string.toLowerCase().toCharArray()){
                 if (!hashMap.containsKey(i) && !Character.isWhitespace(i)) {
                     hashMap.put(i, 1);
                 }
