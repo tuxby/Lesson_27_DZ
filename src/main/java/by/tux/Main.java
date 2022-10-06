@@ -11,7 +11,7 @@ public class Main {
         task4();
     }
 
-    //1. Найти миимальный минимальный элемент массива
+    //1. Найти минимальный элемент массива
     public static void task1(){
         ArrayFunc getMin = arr -> {
             int min = arr[0];
