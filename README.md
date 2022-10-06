@@ -1,5 +1,6 @@
 # Lesson 26 Homework
-![image](https://user-images.githubusercontent.com/87657613/194405910-cf686d95-3e39-4118-9034-c6f76a2b4534.png)
+![image](https://user-images.githubusercontent.com/87657613/194406175-82ff6be7-1921-4973-a0a9-3fd0677683b9.png)
+
 
 1. Найти минимальный элемент массива:
 2. Найти второй по величине элемент массива:
