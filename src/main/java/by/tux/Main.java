@@ -63,7 +63,7 @@ public class Main {
 
     //4. Отсортировать лист со строками в лексикографическом порядке, т.е по алфавиту
     public static void task4(){
-        StringFunc wordViaAphabet = string -> {
+        StringFunc wordViaAlphabet = string -> {
             TreeSet<String> treeSet = new TreeSet<>();
             String s[] = string.split(" ");
             for(var i : s){
@@ -75,7 +75,7 @@ public class Main {
             }
             return res;
         };
-        System.out.println(wordViaAphabet.doSomeWork("Learns very cool if you like what you teach"));
+        System.out.println(wordViaAlphabet.doSomeWork("Learns very cool if you like what you teach"));
     }
 }
 
